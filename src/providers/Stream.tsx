@@ -27,19 +27,20 @@ import { toast } from "sonner";
 
 export type StateType = { messages: Message[]; ui?: UIMessage[] };
 
-const useTypedStream = useStream<
-  StateType,
-  {
-    UpdateType: {
-      messages?: Message[] | Message | string;
-      ui?: (UIMessage | RemoveUIMessage)[] | UIMessage | RemoveUIMessage;
-      context?: Record<string, unknown>;
-    };
-    CustomEventType: UIMessage | RemoveUIMessage;
-  }
->;
+import { UseStream } from "@langchain/langgraph-sdk/react";
 
-type StreamContextType = ReturnType<typeof useTypedStream>;
+type BagType = {
+  UpdateType: {
+    messages?: Message[] | Message | string;
+    ui?: (UIMessage | RemoveUIMessage)[] | UIMessage | RemoveUIMessage;
+    context?: Record<string, unknown>;
+  };
+  CustomEventType: UIMessage | RemoveUIMessage;
+};
+
+const useTypedStream = useStream<StateType, BagType>;
+
+type StreamContextType = UseStream<StateType, BagType>;
 const StreamContext = createContext<StreamContextType | undefined>(undefined);
 
 async function sleep(ms = 4000) {
@@ -169,6 +170,7 @@ export const StreamProvider: React.FC<{ children: ReactNode }> = ({
           <div className="mt-14 flex flex-col gap-2 border-b p-6">
             <div className="flex flex-col items-start gap-2">
               <LangGraphLogoSVG className="h-7" />
+              {/* [BRANDING] 설정 화면 타이틀 수정 (Update setup screen title) */}
               <h1 className="text-xl font-semibold tracking-tight">
                 Agent Chat
               </h1>

@@ -364,6 +364,7 @@ export function Thread() {
                     width={32}
                     height={32}
                   />
+                  {/* [BRANDING] 로고 옆 텍스트 수정 (Update text next to logo) */}
                   <span className="text-xl font-semibold tracking-tight">
                     Agent Chat
                   </span>
@@ -437,6 +438,7 @@ export function Thread() {
                   {!chatStarted && (
                     <div className="flex items-center gap-3">
                       <LangGraphLogoSVG className="h-8 flex-shrink-0" />
+                      {/* [BRANDING] 메인 타이틀 텍스트 수정 (Update main title text) */}
                       <h1 className="text-2xl font-semibold tracking-tight">
                         Agent Chat
                       </h1>

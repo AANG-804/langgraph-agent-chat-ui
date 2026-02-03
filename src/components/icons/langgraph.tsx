@@ -7,6 +7,7 @@ export function LangGraphLogoSVG({
   height?: number;
   className?: string;
 }) {
+  // [BRANDING] 이 SVG를 원하는 로고로 교체하세요 (Replace this SVG with your logo)
   return (
     <svg
       width={width}
