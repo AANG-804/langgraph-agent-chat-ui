@@ -12,8 +12,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   // [BRANDING] 앱 이름과 설명을 수정하세요 (Update app name and description)
-  title: "Agent Chat",
-  description: "Agent Chat UX by LangChain",
+  title: "IDSLab Chat",
+  description: "IDSLab Chat UX by LangChain",
 };
 
 export default function RootLayout({

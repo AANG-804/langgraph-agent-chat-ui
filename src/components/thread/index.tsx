@@ -366,7 +366,7 @@ export function Thread() {
                   />
                   {/* [BRANDING] 로고 옆 텍스트 수정 (Update text next to logo) */}
                   <span className="text-xl font-semibold tracking-tight">
-                    Agent Chat
+                    IDSLab Chat
                   </span>
                 </motion.button>
               </div>
@@ -440,7 +440,7 @@ export function Thread() {
                       <LangGraphLogoSVG className="h-8 flex-shrink-0" />
                       {/* [BRANDING] 메인 타이틀 텍스트 수정 (Update main title text) */}
                       <h1 className="text-2xl font-semibold tracking-tight">
-                        Agent Chat
+                        IDSLab Chat
                       </h1>
                     </div>
                   )}

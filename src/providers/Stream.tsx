@@ -172,11 +172,11 @@ export const StreamProvider: React.FC<{ children: ReactNode }> = ({
               <LangGraphLogoSVG className="h-7" />
               {/* [BRANDING] 설정 화면 타이틀 수정 (Update setup screen title) */}
               <h1 className="text-xl font-semibold tracking-tight">
-                Agent Chat
+                IDSLab Chat
               </h1>
             </div>
             <p className="text-muted-foreground">
-              Welcome to Agent Chat! Before you get started, you need to enter
+              Welcome to IDSLab Chat! Before you get started, you need to enter
               the URL of the deployment and the assistant / graph ID.
             </p>
           </div>
